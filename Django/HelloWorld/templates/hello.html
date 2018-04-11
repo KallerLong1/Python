@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+    <h1>{{ hello }}</h1>
+
+    <table>
+        <tr><td>Name</td><td>Age</td></tr>
+        {% for model in models %}
+            <tr>
+                <td width = 100>
+                    <ul >
+                        <li>
+                            <a href={% url 'base' model.age %}>{{ model.name }}</a>
+                        </li>
+                    </ul>
+                </td>
+                <td>{{ model.age }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
